@@ -1,12 +1,18 @@
-<?php get_header('secondary'); ?>
+<?php get_header(); ?>
 
-<div class="container">
-    <h1>
-        <?php the_title(); ?>
-    </h1>
+<section class="page-wrap">
 
-    <?php get_template_part('includes/section', 'content'); ?>
-    
-</div>
+    <div class="container">
+        <h1>
+            <?php the_title(); ?>
+        </h1>
+
+        <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid mb-3 img-thumbnail" alt="<?php the_title(); ?>">
+
+        <?php get_template_part('includes/section', 'content'); ?>
+
+    </div>
+
+</section>
 
 <?php get_footer(); ?>
